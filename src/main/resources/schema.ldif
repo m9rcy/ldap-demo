@@ -1,0 +1,14 @@
+dn: cn=schema
+changetype: modify
+add: attributeTypes
+attributeTypes: ( 1.2.840.113556.1.4.221 NAME 'sAMAccountName' DESC 'The logon name for the user' EQUALITY caseIgnoreMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+dn: cn=schema
+changetype: modify
+add: attributeTypes
+attributeTypes: ( 0.9.2342.19200300.100.1.3 NAME 'mail' DESC 'The email address of the user' EQUALITY caseIgnoreMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+
+dn: cn=schema
+changetype: modify
+add: objectClasses
+objectClasses: ( 1.2.840.113556.1.5.9 NAME 'user' DESC 'The user object class' SUP top STRUCTURAL MUST ( cn $ sn ) MAY ( sAMAccountName $ mail ) )

@@ -1,0 +1,10 @@
+dn: cn=John Doe,ou=Users,dc=example,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: user
+cn: John Doe
+sAMAccountName: johndoe
+sn: Doe
+mail: johndoe@example.com
+userPassword: {MD5}X03MO1qnZdYdgyfeuILPmQ==  # Password: "password"
